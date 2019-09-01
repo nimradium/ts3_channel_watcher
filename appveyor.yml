@@ -5,8 +5,8 @@ platform:
 - x64
 cache: src/packages
 before_build:
-- cmd: cd src
-- cmd: nuget restore
+- sh: cd src
+- sh: nuget restore
 build_script:
   sh: 
     gcc -m64 -c -O2 -Wall -fPIC -DLINUX plugin.c
