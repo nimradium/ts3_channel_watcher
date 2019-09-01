@@ -8,10 +8,12 @@ platform:
   - x64
   - x86
 cache: src/packages
-before_build:
+install:
   - cd src
   - nuget restore
-
+build:
+  project: src/ts3_channel_watcher.sln
+  verbosity: minimal
 for:
   - matrix:
       only:
@@ -27,11 +29,4 @@ for:
     build_script:
       - sh: gcc -m32 -I../include -c -O2 -Wall -fPIC -DLINUX plugin.cpp
       - sh: gcc -m32 -o ChannelWatcher_x86.so -shared plugin.o
-  - matrix:
-      only:
-        - image: Visual Studio 2019
-    build:
-      project: src/ts3_channel_watcher.sln
-      verbosity: minimal
-
 deploy: off
