@@ -1,4 +1,5 @@
 version: 0.0.{build}
+max_jobs: 4
 image:
   - Ubuntu1804
   - Visual Studio 2019
