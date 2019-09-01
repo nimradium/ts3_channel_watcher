@@ -30,9 +30,6 @@ bld/
 
 changelog.txt
 json_template.json
-logo/
-release/
-task-force-arma-3-radio-master/
-teamspeak3-server_win64/
+etc/
 packages/
 ts3_channel_watcher.todo
