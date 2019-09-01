@@ -5,8 +5,8 @@ platform:
 - x64
 cache: src/packages
 before_build:
-- sh: cd src
-- sh: nuget restore
+  - cd src
+  - nuget restore
 build_script:
   - sh: gcc -m64 -I../include -c -O2 -Wall -fPIC -DLINUX plugin.cpp
   - sh: gcc -m64 -o ChannelWatcher_amd64.so -shared plugin.o
