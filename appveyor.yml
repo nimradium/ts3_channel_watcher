@@ -32,5 +32,5 @@ for:
 deploy:
 - provider: GitHub
   auth_token:
-    secure: 6uZ8hl+wXMuJpiBz/o0Wwd0wVX9GIHw057NrTvy6+Xs8Wq4tQggT900dQh8dRL/QSrptgJdMHtzkO64/VmO44UWUFJ22K8tdSRzWmhG6KkQ=
+    secure: FZBIu3XD5T46oC/YMAi6gJlr5Gye4XLHNJgdBB1l3WM7uf3inuf0LgtTvjdEE3fn
   repository: nimradium/ts3_channel_watcher_test_release
