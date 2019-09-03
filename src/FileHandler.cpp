@@ -52,11 +52,12 @@ const char* FileHandler::getPath()
 FILE* FileHandler::openFile(const char* method, const char* path) {
 	FILE* f;
 	if (errno_t err = fopen_s(&f, path, method); err != 0) {
-		char msg[80];
-		strerror_s(msg, err);
-		printf(msg);
-		ts3Functions.logMessage("ERROR opening file (FileHandler::openFile::fopen_s)", LogLevel_CRITICAL, "Channel Watcher", 0);
-		return f;
+		char error[80];
+		strerror_s(error, err);
+		char msg[TS3_MAX_SIZE_TEXTMESSAGE];
+		snprintf(msg, TS3_MAX_SIZE_TEXTMESSAGE, "ERROR opening file (FileHandler::openFile::fopen_s) error: %s", error);
+		ts3Functions.logMessage(msg, LogLevel_CRITICAL, "Channel Watcher", 0);
+		return nullptr;
 	}
 	return f;
 }
