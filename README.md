@@ -4,7 +4,7 @@ by [@nimradium](https://github.com/nimradium)
 
 [![Build status](https://ci.appveyor.com/api/projects/status/7vl70qnd3o7crqgm?svg=true)](https://ci.appveyor.com/project/nimradium/ts3-channel-watcher)
 ## Description
-ChannelWatcher is a Teamspeak 3 plugin that enables you to select certain channels (e.g. Support-Channels) and notifies you when a user joins this channels. It also saves these Channels so they get automatically loaded each time you start Teamspeak and connect to the server.
+ChannelWatcher is a Teamspeak 3 plugin that enables you to select certain channels (e.g. Support-Channels) and notifies you when a user joins this channels. It also saves these channels so they get automatically loaded each time you start Teamspeak and connect to the server.
 
 ## Installation
 There are two ways to install the plugin. The first way is to use the Teamspeak Package Installer, that should be included in the Teamspeak installation and that should be associated with the .ts3_plugin file extenstion. The second way is to manually copy the plugin files to your plugins folder.
