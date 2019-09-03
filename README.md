@@ -14,7 +14,7 @@ There are two ways to install the plugin. The first way is to use the Teamspeak 
   3. Activate the plugin in the Teamspeak Settings.
 #### Manually copying Files:
   1. Download and unpack `ChannelWatcher.zip` from the [latest release](https://github.com/nimradium/ts3_channel_watcher/releases/latest).
-  2. Copy the contents of `x64` folder, on a 64 bit system, or `x86` folder, on a 32 bit system, into the plugins folder (should be located at `%APPDATA%\TS3Client\plugins`).
+  2. Copy the contents of `win64` folder, on a 64 bit system, or `win32` folder, on a 32 bit system, into the plugins folder (should be located at `%APPDATA%\TS3Client\plugins`).
   3. Activate the plugin in the Teamspeak Settings.
 
 ## Usage
