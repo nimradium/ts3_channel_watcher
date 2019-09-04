@@ -11,7 +11,7 @@ assignees: nimradium
 A clear and concise description of what the bug is.
 
 **Attatchment**
-please attach your crashdump located at `%APPDATA%/TS3Client/crashdumps/ts3dump_ ... .zip (upload the newest one)`
+please attach your crashdump located at %APPDATA%/TS3Client/crashdumps/ts3dump_ ... .zip (upload the newest one)
 
 **To Reproduce (or what you did that caused the bug)**
 Steps to reproduce the behavior:
