@@ -25,5 +25,5 @@ If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
  - OS: [e.g. win64]
- - Version [e.g. 22]
+ - Plugin Version [e.g. 22]
  - TS-Client Version
