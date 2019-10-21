@@ -2,7 +2,7 @@
 #define VERSION_MAJOR 0
 #define VERSION_MINOR 2
 #define VERSION_BUILD 1
-#define VERSION_REVISION 0
+#define VERSION_REVISION 1
 
 
 #define STRINGIZE2(s) #s

@@ -19,6 +19,9 @@
     <Filter Include="Headerdateien\teamspeak">
       <UniqueIdentifier>{a9a5defb-b6ae-4ffb-9488-ce50d6d40255}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Headerdateien\ChannelWatcher">
+      <UniqueIdentifier>{f2d76ab8-579b-4514-9349-6bb97315ff0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="plugin.cpp">
@@ -35,12 +38,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="plugin.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="common.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\plugin_definitions.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
@@ -71,14 +68,20 @@
     <ClInclude Include="version.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="notifier.h">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="channelWatcher.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\ChannelWatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Headerdateien\ChannelWatcher</Filter>
     </ClInclude>
     <ClInclude Include="FileHandler.h">
-      <Filter>Headerdateien</Filter>
+      <Filter>Headerdateien\ChannelWatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="notifier.h">
+      <Filter>Headerdateien\ChannelWatcher</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin.h">
+      <Filter>Headerdateien\ChannelWatcher</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

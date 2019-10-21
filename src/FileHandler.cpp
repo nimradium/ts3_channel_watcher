@@ -249,7 +249,7 @@ int SaveFile::updateChannel(const char* serverUID, const char* channelID, const 
 int SaveFile::updateChannel(const char* serverUID, uint64 channelIDint, const char* channelName)
 {
 	char channelID[36];
-	_ltoa_s(channelIDint, channelID, 36);
+	_ltoa_s(channelIDint, channelID, 10);
 	if (data[serverUID][KEY_WATCHCHANNELS][channelID].value(KEY_CHANNELNAME, "") != channelName) {
 		data[serverUID][KEY_WATCHCHANNELS][channelID][KEY_CHANNELNAME] = channelName;
 		save();
