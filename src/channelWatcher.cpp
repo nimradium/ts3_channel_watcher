@@ -132,6 +132,7 @@ void WatchServer::addWatchChannelToWatchChannelsList(WatchChannel& channel) {
 unsigned int WatchServer::loadWatchChannelsFromSaveFile()
 {
 	if (saveFile.containsServer(serverUID)) {
+		ts3Functions.logMessage("Loading WatchChannels", LogLevel_DEBUG, "Channel Watcher", schID);
 		uint64* channelIDs;
 		size_t size;
 		if (saveFile.loadWatchChannels(serverUID, schID, channelIDs, size) != ERROR_ok) {
