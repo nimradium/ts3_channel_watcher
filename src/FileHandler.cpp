@@ -161,7 +161,7 @@ int SaveFile::loadWatchChannels(const char* serverUID, uint64 schID, uint64*& ar
 	arr = (uint64*)calloc(size,sizeof(uint64));
 	int i = 0;
 	for (json::value_type channel : data[serverUID][KEY_WATCHCHANNELS]) {
-		const uint64 channelID = atol(channel.value(KEY_CHANNELID, "0").c_str());
+		const uint64 channelID = stoull(channel.value(KEY_CHANNELID, "0"));
 		arr[i] = channelID;
 		i++;
 	}
