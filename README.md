@@ -1,3 +1,6 @@
+![GitHub All Releases](https://img.shields.io/github/downloads/nimradium/ts3_channel_watcher/total)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/nimradium/ts3_channel_watcher)
+![Project status](https://img.shields.io/badge/status-paused-red)
 ### Project is paused (I will continue fixing reported bugs) until Teamspeak releases the Plugin API for Teamspeak 5
 ![Channel Watcher](https://raw.githubusercontent.com/nimradium/ts3_channel_watcher/master/doc/channelwatcher.png "Channel Watcher")
 by [@nimradium](https://github.com/nimradium)
