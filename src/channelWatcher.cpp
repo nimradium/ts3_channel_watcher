@@ -137,21 +137,31 @@ unsigned int WatchServer::loadWatchChannelsFromSaveFile()
 		size_t size;
 		if (saveFile.loadWatchChannels(serverUID, schID, channelIDs, size) != ERROR_ok) {
 		}
-		for (int i = 0; i < size;i++) {
-			int buf;
-			if (int res = ts3Functions.getChannelVariableAsInt(schID, channelIDs[i], CHANNEL_ENDMARKER,&buf); res  == ERROR_ok) {
-				ChannelWatcher::addChannel(schID, channelIDs[i], "CW_ADDCHANNEL_LOAD");
-				char* channelName;
-				if (ts3Functions.getChannelVariableAsString(schID, channelIDs[i], CHANNEL_NAME, &channelName) != ERROR_ok) {
-					ts3Functions.logMessage("Error querying Channel Name", LogLevel_ERROR, "Channel Watcher", schID);
+		uint64* existingChannels;
+		if (ts3Functions.getChannelList(schID, &existingChannels) == ERROR_ok) {
+			for (int i = 0; i < size; i++) {
+				boolean exists = false;
+				for (int j = 0; existingChannels[j] != NULL; j++) {
+					if (channelIDs[i] == existingChannels[j]) {
+						exists = true;
+						break;
+					}
 				}
-				saveFile.updateChannel(serverUID, channelIDs[i], channelName);
-				ts3Functions.freeMemory(channelName);
-			}
-			else {
-				saveFile.removeWatchChannel(serverUID, channelIDs[i]);
+				if(exists){
+					ChannelWatcher::addChannel(schID, channelIDs[i], "CW_ADDCHANNEL_LOAD");
+					char* channelName;
+					if (ts3Functions.getChannelVariableAsString(schID, channelIDs[i], CHANNEL_NAME, &channelName) != ERROR_ok) {
+						ts3Functions.logMessage("Error querying Channel Name", LogLevel_ERROR, "Channel Watcher", schID);
+					}
+					saveFile.updateChannel(serverUID, channelIDs[i], channelName);
+					ts3Functions.freeMemory(channelName);
+				}
+				else {
+					saveFile.removeWatchChannel(serverUID, channelIDs[i]);
+				}
 			}
 		}
+		ts3Functions.freeMemory(existingChannels);
 		free(channelIDs);
 	}
 	return 0;
